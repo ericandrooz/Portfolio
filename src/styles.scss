@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet');
+
+$color-primary-light: #FBE8A6;
+$color-primary-dark: #F4976C;
+$color-secondary: #303C6C;
+$color-tertiary-dark: #B4DFE5;
+$color-tertiary-light: #D2FDFF;
+
+* {
+  padding: 0;
+  margin: 0;
+}
+  
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+.App {
+  font-family: sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  padding: 2.5rem;
+  color: $color-secondary
+}
+
+.section {
+  display: grid;
+
+  &__navbar {
+    position: fixed;
+    top: 2.5rem;
+    z-index: 100;
+    // background-color: $color-tertiary-dark;
+    transition: all .5s;
+
+    ul {
+      list-style-type: none;
+      width: calc(100vw - 5rem);
+      text-align: right;
+    }
+    
+    li {
+      display: inline-block;
+    }
+    
+    li a {
+      display: inline-block;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 2.25rem;
+      color: $color-secondary;
+      font-weight: 400;
+    
+      &:hover {
+        color: darken($color-tertiary-dark, 40);
+      }
+    }
+  }
+
+  &--title {
+    padding-top: 7rem;
+    font-size: 4rem;
+    font-weight: 300;
+  }
+
+  &__landing {
+    filter: drop-shadow(-7px 7px 10px rgba(50, 50, 0, 0.25));
+
+    &--inner {
+      background-size: cover;
+      height: calc(100vh - 5rem);
+      background-image:
+      linear-gradient(to right bottom,
+      rgba($color-primary-dark, 0.8),
+      rgba($color-primary-light, 0.8)),
+      url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');
+      align-content: center;
+      clip-path: polygon(0 0, 100% 0, 100% 94%, 0 100%);
+    }
+
+    &--title {
+      padding: 1rem;
+      font-size: 6rem;
+      font-weight: 300;
+    }
+
+    &--subtitle {
+      font-size: 2.75rem;
+      font-weight: 200;
+    }
+  }
+
+  &__services {
+    height: 100vh;
+
+    &--icon {
+      font-size: 8rem;
+      color: $color-tertiary-dark;
+    }
+  }
+
+  &__projects {
+    height: 100vh;
+    background-image:
+    linear-gradient(to right bottom,
+    rgba($color-primary-dark, 1),
+    rgba($color-tertiary-dark, 1));
+  }
+
+  &__connect {
+    height: 100vh;
+  }
+}
+
+.nopacity {
+  opacity: 0;
+  top: -5.75rem;
+}
+
+.colored {
+  background-color: whitesmoke;
+  // opacity: .5;
+
+  // width: 100vw;
+  // left: 0;
+  // top: 0;
+}
